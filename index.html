@@ -21,11 +21,11 @@
         <div class="content">
             <div class="content__wrapper">
                 <h1 class="content__heading">01 Заполни форму</h1>
-                <form class="content__form form">
+                <form class="content__form form" onkeyup="toggleButton()">
                     <div class="content__form-wrapper">
                         <div class="content__form-floating">
                             <input id="form-input" class="content__form-input" type="text"
-                                placeholder="Напишите что-то конкретное" name="Тема урока" onchange="toggleButton()"
+                                placeholder="Напишите что-то конкретное" name="Тема урока"
                                 onkeypress="if(event.keyCode == 13) return false;" autocomplete="off">
                             <span class="content__form-clear"><svg width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -103,8 +103,7 @@
                     </div>
                     <div class="content__form-floating">
                         <textarea id="textarea" class="content__form-textarea" name="Цель урока"
-                            placeholder="Напиши свою учебную цель" maxlength="200" onkeyup=checkLength()
-                            onchange="toggleButton()"></textarea>
+                            placeholder="Напиши свою учебную цель" maxlength="200" onkeyup=checkLength()></textarea>
                         <label class="content__textarea-label" for="textarea">Цель урока</label>
                     </div>
                     <span class="content__textarea-counter"></span>

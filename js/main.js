@@ -64,13 +64,10 @@ function checkLength() {
 
 //Disabled button
 function toggleButton() {
-    let input = document.querySelector('.content__form-input').value;
-    let textarea = document.querySelector('.content__form-textarea').value;
+    let input = document.querySelector('.content__form-input').value.trim();
+    let textarea = document.querySelector('.content__form-textarea').value.trim();
 
-    if (input && textarea) {
-        document.querySelector('.next-btn').disabled = false;
-        document.querySelector('.next-btn').innerHTML = "Создать презентацию";
-    } else if (textarea.value !== '') {
+    if (textarea && input) {
         document.querySelector('.next-btn').disabled = false;
         document.querySelector('.next-btn').innerHTML = "Создать презентацию";
     } else {
